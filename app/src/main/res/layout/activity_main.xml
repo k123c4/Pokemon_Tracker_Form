@@ -7,12 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/type_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Poke - Tracker"
+        android:text="@string/poke_tracker"
         android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -25,27 +26,11 @@
         android:id="@+id/type_subhead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Regester new catch"
+        android:text="@string/regester_new_catch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/type_header" />
-
-    <TextView
-        android:id="@+id/type_lable_nat_num"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="National Number"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/type_subhead" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="380dp" />
 
     <EditText
         android:id="@+id/NationalNumET"
@@ -54,106 +39,116 @@
         android:ems="10"
         android:inputType="text"
         app:layout_constraintBaseline_toBaselineOf="@+id/type_lable_nat_num"
-        app:layout_constraintEnd_toStartOf="@+id/guideline" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="28dp" />
-
-    <TextView
-        android:id="@+id/NameTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Name"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/type_lable_nat_num" />
-
-    <TextView
-        android:id="@+id/speciesTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Species"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/NameTV" />
-
-    <TextView
-        android:id="@+id/GenderTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Gender"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/speciesTV" />
-
-    <TextView
-        android:id="@+id/HeightTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Height"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/GenderTV" />
-
-    <TextView
-        android:id="@+id/weightTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Weight"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/HeightTV" />
-
-    <TextView
-        android:id="@+id/LevelTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Level"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/weightTV" />
-
-    <TextView
-        android:id="@+id/BaseStatHead"
-        android:layout_width="124dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="356dp"
-        android:text="Base Stats"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/type_header" />
-
-    <TextView
-        android:id="@+id/hpTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="HP"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/BaseStatHead" />
-
-    <TextView
-        android:id="@+id/attackTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Attack"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/hpTV" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline2" />
 
     <TextView
         android:id="@+id/defenceTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:text="Defence"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/attackTV"
         app:layout_constraintTop_toBottomOf="@+id/attackTV" />
+
+    <TextView
+        android:id="@+id/attackTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Attack"
+        app:layout_constraintEnd_toEndOf="@+id/hpTV"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toEndOf="@+id/hpTV"
+        app:layout_constraintTop_toBottomOf="@+id/hpTV" />
+
+    <TextView
+        android:id="@+id/hpTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="HP"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/BaseStatHead" />
+
+    <TextView
+        android:id="@+id/weightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:text="Weight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeightTV" />
+
+    <TextView
+        android:id="@+id/type_lable_nat_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="National Number"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/type_subhead" />
+
+    <TextView
+        android:id="@+id/LevelTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Level"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightTV" />
+
+    <TextView
+        android:id="@+id/BaseStatHead"
+        android:layout_width="97dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Base Stats"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LevelTV" />
+
+    <TextView
+        android:id="@+id/GenderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/gender"
+        app:layout_constraintTop_toBottomOf="@+id/speciesTV"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        tools:layout_editor_absoluteX="49dp" />
+
+    <TextView
+        android:id="@+id/NameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/name"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/type_lable_nat_num" />
+
+    <TextView
+        android:id="@+id/HeightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/height"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/GenderTV" />
+
+    <TextView
+        android:id="@+id/speciesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Species"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/NameTV" />
 
     <EditText
         android:id="@+id/nameET"
@@ -162,7 +157,7 @@
         android:layout_marginStart="93dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/NameTV"
         app:layout_constraintTop_toBottomOf="@+id/NationalNumET" />
@@ -171,63 +166,121 @@
         android:id="@+id/speciesET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/speciesTV"
-        app:layout_constraintTop_toBottomOf="@+id/nameET" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/speciesTV"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2" />
 
     <RadioButton
         android:id="@+id/maleRB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Male"
-        app:layout_constraintStart_toEndOf="@+id/femaleRB"
-        app:layout_constraintTop_toBottomOf="@+id/speciesET" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/femaleRB"
+        app:layout_constraintStart_toEndOf="@+id/femaleRB" />
 
     <RadioButton
         android:id="@+id/femaleRB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
         android:text="Female"
-        app:layout_constraintStart_toStartOf="@+id/speciesET"
-        app:layout_constraintTop_toBottomOf="@+id/speciesET" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/GenderTV"
+        app:layout_constraintEnd_toStartOf="@+id/maleRB" />
 
     <RadioButton
         android:id="@+id/unkRB"
         android:layout_width="62dp"
         android:layout_height="49dp"
         android:text="Unk"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/maleRB"
         app:layout_constraintStart_toEndOf="@+id/maleRB"
-        app:layout_constraintTop_toBottomOf="@+id/speciesET" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"/>
 
     <EditText
         android:id="@+id/heightET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="3dp"
         android:ems="10"
         android:inputType="number|numberDecimal"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/HeightTV"
-        app:layout_constraintTop_toBottomOf="@+id/maleRB" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/HeightTV"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2" />
 
     <EditText
         android:id="@+id/weightET"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="98dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toEndOf="@+id/weightTV"
-        app:layout_constraintTop_toBottomOf="@+id/heightET" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/weightTV"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2" />
+
+    <EditText
+        android:id="@+id/HpEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hpTV"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2" />
+
+    <EditText
+        android:id="@+id/AttackET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/attackTV"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/LevelTV"
+        app:layout_constraintStart_toStartOf="@+id/weightET" />
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/defenceTV"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="380dp" />
+
+    <Button
+        android:id="@+id/ResetBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/reset"
+        app:layout_constraintEnd_toStartOf="@+id/SaveBt"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+
+    <Button
+        android:id="@+id/SaveBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ResetBt"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        tools:layout_editor_absoluteX="285dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

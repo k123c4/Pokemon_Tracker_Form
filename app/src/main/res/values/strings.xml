@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Pokemon_Tracker_From</string>
+    <string name="gender">Gender</string>
+    <string name="name">Name</string>
+    <string name="height">Height</string>
+    <string name="poke_tracker">Poke - Tracker</string>
+    <string name="save">Save</string>
+    <string name="reset">Reset</string>
+    <string name="regester_new_catch">Regester new catch</string>
 </resources>
