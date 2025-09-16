@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- When checked -->
+    <item android:state_checked="true" android:drawable="@color/air_force_blue" />
+    <!-- Default -->
+    <item android:drawable="@android:color/transparent" />
+</selector>

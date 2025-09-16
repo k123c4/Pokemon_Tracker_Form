@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TableRow>
+            <TextView
+                android:id="@+id/type_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/poke_tracker"
+                android:textColor="@color/black"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"
+                android:layout_span="2"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/type_subhead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/register_new_catch"
+                android:layout_span="2"/>
+        </TableRow>
+
+        <!-- National Number -->
+        <TableRow>
+            <TextView
+                android:id="@+id/nat_numLB"
+                android:text="@string/national_number" />
+
+            <EditText
+                android:id="@+id/NationalNumET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="@string/NatNum_896"/>
+        </TableRow>
+
+        <!-- Name -->
+        <TableRow>
+            <TextView
+                android:id="@+id/NameTV"
+                android:text="@string/name" />
+
+            <EditText
+                android:id="@+id/nameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="@string/glastrier"/>
+        </TableRow>
+
+        <!-- Species -->
+        <TableRow>
+            <TextView
+                android:id="@+id/speciesTV"
+                android:text="@string/species" />
+
+            <EditText
+                android:id="@+id/speciesET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="@string/wild_horse_pokemon"/>
+        </TableRow>
+
+        <!-- Gender (spans across 2 columns) -->
+        <TableRow>
+            <TextView
+                android:id="@+id/GenderTV"
+                android:text="@string/gender"
+                android:layout_span="2" />
+        </TableRow>
+
+        <TableRow>
+            <RadioGroup
+                android:id="@+id/genderGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/maleRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male"
+                    android:buttonTint="@color/air_force_blue" />
+
+                <RadioButton
+                    android:id="@+id/femaleRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female"
+                    android:buttonTint="@color/air_force_blue" />
+
+                <RadioButton
+                    android:id="@+id/unkRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unknown"
+                    android:buttonTint="@color/air_force_blue" />
+            </RadioGroup>
+        </TableRow>
+
+        <!-- Height -->
+        <TableRow>
+            <TextView
+                android:id="@+id/HeightTV"
+                android:text="@string/height" />
+
+            <EditText
+                android:id="@+id/heightET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number|numberDecimal"
+                android:hint="@string/height_hint"/>
+        </TableRow>
+
+        <!-- Weight -->
+        <TableRow>
+            <TextView
+                android:id="@+id/weightTV"
+                android:text="@string/weight" />
+
+            <EditText
+                android:id="@+id/weightET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:hint="@string/weight_hint"/>
+        </TableRow>
+
+        <!-- Level (Spinner) -->
+        <TableRow>
+            <TextView
+                android:id="@+id/LevelTV"
+                android:text="@string/level" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <!-- Base Stats Header -->
+        <TableRow>
+            <TextView
+                android:id="@+id/BaseStatHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/base_stats"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_span="2" />
+        </TableRow>
+
+        <!-- HP -->
+        <TableRow>
+            <TextView
+                android:id="@+id/hpTV"
+                android:text="@string/hp" />
+
+            <EditText
+                android:id="@+id/HpEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="@string/zero"/>
+        </TableRow>
+
+        <!-- Attack -->
+        <TableRow>
+            <TextView
+                android:id="@+id/attackTV"
+                android:text="@string/attack" />
+
+            <EditText
+                android:id="@+id/AttackET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="@string/zero"/>
+        </TableRow>
+
+        <!-- Defence -->
+        <TableRow>
+            <TextView
+                android:id="@+id/defenceTV"
+                android:text="@string/defence" />
+
+            <EditText
+                android:id="@+id/editTextText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="@string/zero"/>
+        </TableRow>
+
+        <!-- Buttons -->
+        <TableRow
+            android:gravity="center"
+            android:stretchColumns="">
+
+            <Button
+                android:id="@+id/ResetBt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/air_force_blue"
+                android:text="@string/reset" />
+
+            <Button
+                android:id="@+id/SaveBt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/air_force_blue"
+                android:text="@string/save"
+                android:layout_marginStart="16dp" />
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>

@@ -6,5 +6,22 @@
     <string name="poke_tracker">Poke - Tracker</string>
     <string name="save">Save</string>
     <string name="reset">Reset</string>
-    <string name="regester_new_catch">Regester new catch</string>
+    <string name="register_new_catch">Register new catch</string>
+    <string name="defence">Defence</string>
+    <string name="attack">Attack</string>
+    <string name="hp">HP</string>
+    <string name="weight">Weight</string>
+    <string name="national_number">National Number</string>
+    <string name="level">Level</string>
+    <string name="base_stats">Base Stats</string>
+    <string name="species">Species</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="unknown">Unk</string>
+    <string name="NatNum_896">896</string>
+    <string name="wild_horse_pokemon">Wild Horse Pokemon</string>
+    <string name="glastrier">Glastrier</string>
+    <string name="height_hint">2.2</string>
+    <string name="weight_hint">800.0</string>
+    <string name="zero">0</string>
 </resources>
