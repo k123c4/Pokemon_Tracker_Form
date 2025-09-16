@@ -102,5 +102,6 @@ public class MainActivity extends AppCompatActivity {
             genderGroup.clearCheck(); //Extra Credit
             lvlSp.setSelection(0);
         });
+
     }
 }

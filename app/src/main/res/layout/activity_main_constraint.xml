@@ -292,7 +292,7 @@
         android:backgroundTint="@color/air_force_blue"
         android:text="@string/reset"
         app:layout_constraintEnd_toStartOf="@+id/SaveBt"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintTop_toBottomOf="@+id/defenceET" />
 
     <Button
         android:id="@+id/SaveBt"
