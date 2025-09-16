@@ -125,6 +125,38 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         tools:layout_editor_absoluteX="49dp" />
 
+    <RadioGroup
+        android:id="@+id/genderGroup"
+        android:layout_width="213dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@id/GenderTV"
+        app:layout_constraintBottom_toBottomOf="@id/GenderTV"
+
+        app:layout_constraintEnd_toStartOf="@id/guideline2">
+
+        <RadioButton
+            android:id="@+id/maleRB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/air_force_blue"
+            android:text="@string/male" />
+
+        <RadioButton
+            android:id="@+id/femaleRB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/air_force_blue"
+            android:text="@string/female" />
+
+        <RadioButton
+            android:id="@+id/unkRB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/air_force_blue"
+            android:text="@string/unknown" />
+    </RadioGroup>
+
     <TextView
         android:id="@+id/NameTV"
         android:layout_width="wrap_content"
@@ -158,14 +190,11 @@
         android:id="@+id/nameET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="93dp"
         android:ems="10"
+        android:hint="@string/glastrier"
         android:inputType="text"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/NameTV"
-        app:layout_constraintTop_toBottomOf="@+id/NationalNumET"
-        android:hint="@string/glastrier"/>
+        app:layout_constraintBaseline_toBaselineOf="@+id/NameTV"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2" />
 
     <EditText
         android:id="@+id/speciesET"
@@ -177,30 +206,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         android:hint="@string/wild_horse_pokemon"/>
 
-    <RadioButton
-        android:id="@+id/maleRB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/male"
-        app:layout_constraintBaseline_toBaselineOf="@+id/femaleRB"
-        app:layout_constraintStart_toEndOf="@+id/femaleRB" />
 
-    <RadioButton
-        android:id="@+id/femaleRB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/female"
-        app:layout_constraintBaseline_toBaselineOf="@+id/GenderTV"
-        app:layout_constraintEnd_toStartOf="@+id/maleRB" />
-
-    <RadioButton
-        android:id="@+id/unkRB"
-        android:layout_width="62dp"
-        android:layout_height="49dp"
-        android:text="@string/unknown"
-        app:layout_constraintBaseline_toBaselineOf="@+id/maleRB"
-        app:layout_constraintStart_toEndOf="@+id/maleRB"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"/>
 
     <EditText
         android:id="@+id/heightET"
