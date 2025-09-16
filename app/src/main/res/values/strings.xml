@@ -21,7 +21,7 @@
     <string name="NatNum_896">896</string>
     <string name="wild_horse_pokemon">Wild Horse Pokemon</string>
     <string name="glastrier">Glastrier</string>
-    <string name="height_hint">2.2</string>
-    <string name="weight_hint">800.0</string>
+    <string name="height_hint">2.2 m</string>
+    <string name="weight_hint">800.0 kg</string>
     <string name="zero">0</string>
 </resources>

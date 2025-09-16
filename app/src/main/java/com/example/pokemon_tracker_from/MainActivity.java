@@ -1,6 +1,8 @@
 package com.example.pokemon_tracker_from;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,6 +51,42 @@ public class MainActivity extends AppCompatActivity {
         );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         lvlSp.setAdapter(adapter);
+        // m to height
+        heightET.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                String input = s.toString();
+
+                if (!input.endsWith(" m") && !input.isEmpty()) {
+                    heightET.removeTextChangedListener(this);
+                    input = input.replaceAll(" m$", ""); // avoid duplicates
+                    heightET.setText(input + " m");
+                    heightET.setSelection(input.length()); // keep cursor before "m"
+                    heightET.addTextChangedListener(this);
+                }
+            }
+
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+        });
+        // kg to weight
+        weightET.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                String input = s.toString();
+
+                if (!input.endsWith(" kg") && !input.isEmpty()){
+                    weightET.removeTextChangedListener(this);
+                    input = input.replaceAll(" kg$", "");
+                    weightET.setText(input + " kg");
+                    weightET.setSelection(input.length());
+                    weightET.addTextChangedListener(this);
+                }
+            }
+
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+        });
 
         //reset button function
         resBut.setOnClickListener(v -> {
@@ -61,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             attackET.setText("");
             defenceET.setText("");
 
-            genderGroup.clearCheck();
+            genderGroup.clearCheck(); //Extra Credit
             lvlSp.setSelection(0);
         });
     }
