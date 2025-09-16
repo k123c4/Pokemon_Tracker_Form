@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintBaseline_toBaselineOf="@+id/nat_numLB"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         android:hint="@string/NatNum_896"/>
@@ -192,7 +192,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/glastrier"
-        android:inputType="text"
+        android:inputType="textCapWords"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ. "
         app:layout_constraintBaseline_toBaselineOf="@+id/NameTV"
         app:layout_constraintEnd_toStartOf="@+id/guideline2" />
 
@@ -201,7 +202,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textCapWords"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
         app:layout_constraintBaseline_toBaselineOf="@+id/speciesTV"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         android:hint="@string/wild_horse_pokemon"/>
@@ -256,7 +258,7 @@
         app:layout_constraintStart_toStartOf="@+id/weightET" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/defenceET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

@@ -71,8 +71,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="text"
                 android:layout_marginTop="8dp"
+                android:inputType="textCapWords"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ. "
                 android:hint="@string/glastrier"/>
         </LinearLayout>
 
@@ -95,7 +96,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="text"
+                android:inputType="textCapWords"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
                 android:hint="@string/wild_horse_pokemon"/>
         </LinearLayout>
 
@@ -231,7 +233,7 @@
                 android:layout_marginTop="8dp" />
 
             <EditText
-                android:id="@+id/HpEt"
+                android:id="@+id/HpET"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -277,7 +279,7 @@
                 android:layout_marginTop="8dp" />
 
             <EditText
-                android:id="@+id/editTextText4"
+                android:id="@+id/defenceET"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
