@@ -231,7 +231,7 @@
         android:hint="@string/weight_hint"/>
 
     <EditText
-        android:id="@+id/HpEt"
+        android:id="@+id/HpET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
