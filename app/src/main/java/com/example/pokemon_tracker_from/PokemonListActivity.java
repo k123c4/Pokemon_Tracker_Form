@@ -25,6 +25,7 @@ public class PokemonListActivity extends AppCompatActivity {
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("Pokédex");
         }
 
 
