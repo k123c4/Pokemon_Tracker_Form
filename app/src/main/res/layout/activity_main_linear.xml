@@ -311,6 +311,13 @@
                 android:backgroundTint="@color/air_force_blue"
                 android:text="@string/save"
                 android:layout_marginStart="16dp" />
+            <Button
+                android:id="@+id/DeleteBT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Rosy_Taupe"
+                android:text="@string/delete_data"
+                android:layout_marginStart="16dp" />
         </LinearLayout>
 
     </LinearLayout>

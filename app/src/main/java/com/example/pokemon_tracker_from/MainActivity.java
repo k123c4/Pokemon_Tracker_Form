@@ -1,9 +1,11 @@
 package com.example.pokemon_tracker_from;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +26,13 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    View.OnClickListener DeleteListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, PokemonListActivity.class);
+            startActivity(intent);
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         EditText defenceET = findViewById(R.id.defenceET);
         Button resBut = findViewById(R.id.ResetBt);
         Button subBut = findViewById(R.id.SaveBt);
+        Button delBut = findViewById(R.id.DeleteBT);
+        delBut.setOnClickListener(DeleteListener);
         //TextViews
         TextView natNumTV = findViewById(R.id.nat_numLB);
         TextView nameTV = findViewById(R.id.NameTV);

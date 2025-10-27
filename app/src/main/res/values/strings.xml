@@ -24,4 +24,6 @@
     <string name="height_hint">2.2 m</string>
     <string name="weight_hint">800.0 kg</string>
     <string name="zero">0</string>
+    <string name="delete_data">Delete Data</string>
+    <string name="no_pok_mon_found">No Pokémon found.</string>
 </resources>
