@@ -1,6 +1,7 @@
 package com.example.pokemon_tracker_from;
 
 import android.content.ContentProvider;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -27,9 +28,9 @@ public class PokemonDBProvider extends ContentProvider {
     private static final String SQL_CREATE_MAIN =
             "CREATE TABLE " + TABLE_NAME + " (" +
                     _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    NatNum + " TEXT, " +
+                    NatNum + " TEXT UNIQUE, " +
                     Name + " TEXT, " +
-                    Species + "TEXT" +
+                    Species + " TEXT, " +
                     Gender + " TEXT, " +
                     Height + " REAL, " + //decimal
                     Weight + " REAL, " +
@@ -41,6 +42,14 @@ public class PokemonDBProvider extends ContentProvider {
     public static final Uri CONTENT_URI =
             Uri.parse("content://my.package.PokemonDBProvider.provider");
     MainDatabaseHelper mHelper;
+
+    @Override
+    public int update(Uri uri, ContentValues values,
+                      String selection, String[] selectionArgs) {
+        return mHelper.getWritableDatabase()
+                .update("Pokemon", values, selection, selectionArgs);
+    }
+
     protected final class MainDatabaseHelper extends SQLiteOpenHelper {
 
         MainDatabaseHelper(Context context) {
@@ -74,21 +83,13 @@ public int delete(Uri uri, String whereClause,
 
     @Override
     public Uri insert(Uri uri, ContentValues values) {
-        assert values != null;
-        Integer natNum = values.getAsInteger("NationalNumber");
-        String name = values.getAsString("Name");
-        String species = values.getAsString("Species");
-        String gender = values.getAsString("Gender");
-        Double height = values.getAsDouble("Height");
-        Double weight = values.getAsDouble("Weight");
-        Integer level = values.getAsInteger("Level");
-        Integer hp = values.getAsInteger("HP");
-        Integer attack = values.getAsInteger("Attack");
-        Integer defence = values.getAsInteger("Defence");
-
         SQLiteDatabase db = mHelper.getWritableDatabase();
-        long id = db.insert(TABLE_NAME, null, values);
-        return Uri.withAppendedPath(uri," "+ id);
+        long id = db.insertWithOnConflict(TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_IGNORE);
+        if (id == -1) return Uri.withAppendedPath(CONTENT_URI, "-1x");  // duplicate
+
+        Uri newUri = ContentUris.withAppendedId(CONTENT_URI, id);
+        if (getContext() != null) getContext().getContentResolver().notifyChange(newUri, null);
+        return newUri;
     }
 
     @Override
@@ -100,15 +101,11 @@ public int delete(Uri uri, String whereClause,
     @Override
     public Cursor query(Uri uri, String[] projection, String selection,
                         String[] selectionArgs, String sortOrder) {
-        Cursor c = mHelper.getReadableDatabase().query(TABLE_NAME, projection, selection, selectionArgs,
-                null,null,null,sortOrder);
+        Cursor c = mHelper.getReadableDatabase().query(
+                TABLE_NAME, projection, selection, selectionArgs,null, null,sortOrder, null);
+        if (getContext() != null) {
+            c.setNotificationUri(getContext().getContentResolver(), uri);
+        }
         return c;
     }
-
-    @Override
-    public int update(Uri uri, ContentValues values,
-                      String selection, String[] selectionArgs) {
-        return mHelper.getWritableDatabase()
-                .update("Pokemon", values, selection, selectionArgs);
     }
-}

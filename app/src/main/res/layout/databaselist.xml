@@ -6,8 +6,9 @@
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:dividerHeight="1dp" />
-    <!--Empty list-->
+        android:dividerHeight="1dp"
+        android:layout_marginTop="100dp"/>
+
     <TextView
         android:id="@+id/empty"
         android:layout_width="match_parent"
